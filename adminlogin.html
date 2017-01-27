@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin login</title>
+<style>
+body{
+background-image:url("http://ailievski.com/wp-content/uploads/2014/11/bp_background_2_blue1.jpg");
+background-repeat:no-repeat; /*we want to have one single image not a repeated one*/  
+background-size:cover;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var uname=login.Username.value;
+	var  pass=login.Password.value;
+	if(uname=="")
+		{
+		window.alert("enter the username");
+		return false;
+		}
+	if(pass=="")
+		{
+		window.alert("enter the password");
+		return false;
+		}
+	}</script>
+
+</head>
+<form method="post" name="login" action="admin.jsp" onsubmit="return validate()">
+<br>
+<br>
+<center><h1><font color="white">
+ADMINISTRATOR LOGIN</font></center>
+</h1>
+<br>
+<font color="white"><center>USERNAME:
+<input type="text" name="Username" maxlength="20"></center></font><br>
+<font color="white"><center>PASSWORD:
+<input type="password" name="Password" maxlength="15"></center></font><br>
+<center><input type="submit" value="login"></center>
+<a href="signupadmin.html"><center><text color="white">signup</text></center></a>
+
+</form>
+</html>
