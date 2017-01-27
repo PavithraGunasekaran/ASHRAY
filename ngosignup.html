@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>police signup form</title>
+<style>
+body{
+background-image:url("http://theavvashyagroup.com/wp-content/uploads/2013/10/Slider-Banner-02.jpg");
+background-repeat:no-repeat; /*we want to have one single image not a repeated one*/  
+background-size:cover;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var Username=ngosignup.Username.value;
+	var Password=ngosignup.Password.value;
+	var Location=ngosignup.Location.value;
+	//var passpt=/\w*(\d\w*[a-z A-Z]|[a-z A-Z]\w*\d)\w*/;
+	
+	if(Username=="")
+		{
+		window.alert("enter the name");
+		return false;
+		}
+		if(Password=="")
+	{
+	window.alert("enter the Password");
+	return false;
+	}
+	}
+	</script>
+
+</head>
+<body>
+<form method="post" name="ngosignup" action="ngosignup.jsp" onsubmit="return validate()">
+<center><h1>NGO SIGNUP</h1></center>
+<h1><center><b>Username:<input type="text" name="Username"></b></center></h1><br>
+<h1><center><b>Password:<input type="text" name="Password"></b></center></h1><br>
+<h1><center><b>Location:<input type="text" name="Location"></b></center></h1><br>
+<center><input type="submit" value="signup"></center>
+</body>
+</html>	

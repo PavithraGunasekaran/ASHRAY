@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>police signup form</title>
+<style>
+body{
+background-image:url("http://theavvashyagroup.com/wp-content/uploads/2013/10/Slider-Banner-02.jpg");
+background-repeat:no-repeat; /*we want to have one single image not a repeated one*/  
+background-size:cover;
+}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	var Username=policesignup.Username.value;
+	var Station=policesignup.Station.value;
+	var Designation=policesignup.Designation.value;
+	var Mobilenumber=policesignup.Mobilenumber.value;
+	var Password=policesignup.Password.value;
+	var mobilepat=/^\d{10}$/;
+	var passpt=/\w*(\d\w*[a-z A-Z]|[a-z A-Z]\w*\d)\w*/;
+	var stationpat=/^\w{2}$/;
+    if(!mobilepat.test(Mobilenumber))
+    	{
+    	window.alert("enter a valid mobile number");
+    	return false;
+    	}
+    if(!passpt.test(Password))
+    	{
+    	window.alert("enter a valid password");
+    	return false;
+    	}
+    if(!stationpat.test(Station))
+    	{
+    	window.alert("enter a valid station");
+    	return false;
+    	}
+	if(Username=="")
+		{
+		window.alert("enter the name");
+		return false;
+		}
+	if(Station=="")
+		{
+		window.alert("enter the Station");
+		return false;
+		}
+	if(Designation=="")
+		{
+		window.alert("enter the Designation");
+		return false;
+		}
+	if(Mobilenumber=="")
+		{
+		window.alert("enter the mobilenumber");
+		return false;
+		}
+	if(Password=="")
+	{
+	window.alert("enter the Password");
+	return false;
+	}
+	}
+	</script>
+
+</head>
+<body>
+<form method="post" name="policesignup" action="policesignup.jsp" onsubmit="return validate()">
+<center><h1><font color="black">POLICE SIGNUP</font></h1></center>
+<h1><center><b>Username:<input type="text" name="Username"></b></center></h1><br>
+<h1><center><b>Station:<input type="text" name="Station"></b></center></h1><br>
+<h1><center><b>Designation:<input type="text" name="Designation"></b></center></h1><br>
+<h1><center><b>Mobilenumber:<input type="text" name="Mobilenumber"></b></center></h1><br>
+<h1><center><b>Password:<input type="text" name="Password"></b></center></h1><br>
+<input type="submit" value="signup">
+</body>
+</html>
